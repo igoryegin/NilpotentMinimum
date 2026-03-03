@@ -1,17 +1,20 @@
 Package: NilpotentMinimum
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Basic R Functionality for Nilpotent Minimum t-norm fuzzy logic
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Igor", "Yegin",
+      email = "igor.yegin@stir.ac.uk",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Nilpotent Minimum (commonly shortened to NM) is a class of t-norms 
+introduced by Fodor (1991). It is an archetypical example of a non-continuous 
+t-norm which has a well-defined residuum and a symmetric induced negation with a 
+unique fixpoint. This package provides a number of R functions for NM logic 
+whose syntax is mostly identical to that of lfl package.
+License: `use_gpl3_license()`
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/igoryegin/NilpotentMinimum
