@@ -1,7 +1,11 @@
 \name{nilmin.residuum}
 \alias{nilmin.residuum}
 \title{
-Residuum (R-implication) of the Nilpotent Minimum (NM) T-norm
+  Nilpotent Minimum (NM) t-norm residuum
+}
+\description{
+  Computes the fuzzy implication (also known as R-implication or residuum)
+  defined within the NM fuzzy logic
 }
 \usage{
 nilmin.residuum(x, y, fixpoint = 0.5)
