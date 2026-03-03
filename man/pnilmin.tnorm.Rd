@@ -1,4 +1,5 @@
 \name{pnilmin.tnorm}
+\alias{pnilmin.tnorm}
 \title{
 Parallel Nilpotent Minimum (NM) t-norm
 }

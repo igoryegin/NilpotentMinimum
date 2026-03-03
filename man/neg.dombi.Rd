@@ -1,4 +1,5 @@
 \name{neg.dombi}
+\alias{neg.dombi}
 \title{
 Dombi-parametrised strong fuzzy negation
 }

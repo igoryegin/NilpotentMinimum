@@ -1,4 +1,5 @@
 \name{nilmin.residuum}
+\alias{nilmin.residuum}
 \title{
 Residuum (R-implication) of the Nilpotent Minimum (NM) T-norm
 }
