@@ -33,7 +33,7 @@ with \code{fixpoint} parameter passed internally to \code{\link{neg.dombi}}.
 
 }
 \references{
-Petr Cintula, Petr Hájek, & Noguera, C. (2011). Handbook of Mathematical Fuzzy Logic. Studies in Logic.
+Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy logic. Studies in Logic.
 }
 \author{
 Igor Yegin
