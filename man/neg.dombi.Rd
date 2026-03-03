@@ -16,7 +16,6 @@ neg.dombi(x, fixpoint = 0.5)
   \item{fixpoint}{
   a unique real number \eqn{\nu} invariant under negation, i.e. the one for which \eqn{N_D(x) = x} }
   }
-}
 
 \value{
 A vector of negated scores
