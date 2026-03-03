@@ -10,10 +10,11 @@ Authors@R: c(
     )
   )
 Description: Nilpotent Minimum (commonly shortened to NM) is a class of t-norms 
-    introduced by Fodor (1991). It is an archetypical example of a non-continuous 
+    introduced by Fodor (1995). It is an archetypical example of a non-continuous 
     t-norm which has a well-defined residuum and a symmetric induced negation with a 
     unique fixpoint. This package provides a number of R functions for NM logic 
-    whose syntax is mostly identical to that of lfl package.
+    whose syntax is mostly identical to that of lfl package, 
+    except NilpotentMininum is written entirely in native R code.
 License: `use_gpl3_license()`
 Encoding: UTF-8
 LazyData: true
