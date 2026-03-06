@@ -1,6 +1,6 @@
 Package: NilpotentMinimum
 Type: Package
-Title: Basic R Functionality for Nilpotent Minimum t-norm fuzzy logic
+Title: Basic R Functionality for (Strong and Weak) Nilpotent Minimum fuzzy logics
 Version: 0.1.0
 Authors@R: c(
     person(
@@ -9,8 +9,9 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: Nilpotent Minimum (commonly shortened to NM) is a class of t-norms 
-    introduced by Fodor (1995). It is an archetypical example of a non-continuous 
+Description: (Strong) Nilpotent Minimum (commonly shortened to NM) is a class of t-norms 
+    introduced by Fodor (1995) and later generalised for weak negation by 
+    Esteva and Godo (2001). NM t-norm is an archetypical example of a non-continuous 
     t-norm which has a well-defined residuum and a symmetric induced negation with a 
     unique fixpoint. This package provides a number of R functions for NM logic 
     whose syntax is mostly identical to that of lfl package, 
