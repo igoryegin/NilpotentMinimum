@@ -1,4 +1,4 @@
-\name{fuzzy.negation}
+\name{FuzzyNegation}
 \alias{neg.refdp}
 \alias{neg.dombi}
 %- Also NEED an '\alias' for EACH other topic documented here.

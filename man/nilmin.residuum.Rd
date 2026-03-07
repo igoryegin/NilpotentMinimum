@@ -8,7 +8,7 @@
   defined within the NM fuzzy logic
 }
 \usage{
-nilmin.residuum(x, y, fixpoint = 0.5)
+nilmin.residuum(x, y, type = c("strong", "weak"), fixpoint = 0.5)
 }
 
 \arguments{
@@ -18,8 +18,11 @@ nilmin.residuum(x, y, fixpoint = 0.5)
   \item{y}{
   a vector of real numbers from 0 to 1; the \emph{right-hand} side of implication
   }
+  \item{type}{
+  a string; determines whether strong or weak negation is used (see \link{FuzzyNegation})
+  }
   \item{fixpoint}{
-  negation fixpoint to be used inside the function
+  a real number; negation fixpoint to be used inside the function
   }
 }
 
@@ -30,9 +33,9 @@ a vector of fuzzy truth values for the expression \eqn{x \rightarrow_{NM} y}
 \details{
 When \eqn{x > y}, the residuation operator corresponding to the NM t-norm is
 
-\deqn{x \rightarrow_{NM} y = \max \left( N(x), y \right)}
+\deqn{x \rightarrow_{NM} y = \max \left( \sim{x}, y \right)}
 
-where \eqn{N(x)} is an arbitrary strong negation.
+where \eqn{\sim x} is an arbitrary negation operator.
 This function uses Dombi negation,
 with \code{fixpoint} parameter passed internally to \code{\link{neg.dombi}}.
 
@@ -44,11 +47,12 @@ Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy lo
 Igor Yegin
 }
 \seealso{
-\code{\link{neg.dombi}}
+\code{\link{FuzzyNegation}}
 }
 \examples{
 require(NilpotentMinimum)
 x <- seq(0, 1, 0.1)
 y <- seq(1, 0, -0.1)
 nilmin.residuum(x, y)
+nilmin.residuum(x, y, type = "weak")
 }
