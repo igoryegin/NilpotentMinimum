@@ -6,7 +6,7 @@
 Strong and Weak Fuzzy Negations
 }
 \description{
-Simple functions to compute Dombi-parametrised (strong) negation or Refined Drastic Product
+Simple functions to compute Dombi-parametrised (strong) negation or Revised Drastic Product
   (weak) negation
 }
 \usage{
@@ -40,7 +40,7 @@ described by the following formula
 Standard fuzzy negation \eqn{N(x) = 1-x}
 is a special case of Dombi negation with \eqn{\nu = 0.5}.
 
-Weak negation is represented by the \bold{Refined Drastic Product (RDP)} negation.
+Weak negation is represented by the \bold{Revised Drastic Product (RDP)} negation.
 It is defined as a piecewise function
 
 \deqn{n(x) = \begin{cases}
