@@ -1,5 +1,5 @@
 nilmin.residuum <- function(x, y, type = c("strong", "weak"), fixpoint = 0.5) {
-  neg <- match.arg(neg)
+  type <- match.arg(type)
   if(!is.numeric(x) | !is.numeric(y))
     stop('x and/or y is not numeric')
   if(any(c(x, y) < 0) | any(c(x, y) > 1))
