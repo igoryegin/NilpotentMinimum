@@ -1,5 +1,5 @@
 \name{FuzzyNegation}
-\alias{neg.refdp}
+\alias{neg.revdp}
 \alias{neg.dombi}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
@@ -11,7 +11,7 @@ Simple functions to compute Dombi-parametrised (strong) negation or Revised Dras
 }
 \usage{
 neg.dombi(x, fixpoint = 0.5)
-neg.refdp(x, fixpoint = 0.5)
+neg.revdp(x, fixpoint = 0.5)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -77,8 +77,8 @@ require(NilpotentMinimum)
 x <- seq(0, 1, 0.01)
 neg.dombi(x)
 neg.dombi(x, fixpoint = 0.65)
-neg.refdp(x)
-neg.refdp(x, fixpoint = 0)
+neg.revdp(x)
+neg.revdp(x, fixpoint = 0)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

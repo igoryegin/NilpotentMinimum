@@ -1,4 +1,4 @@
-neg.refdp <- function(x, fixpoint = 0.5) {
+neg.revdp <- function(x, fixpoint = 0.5) {
   if(!is.numeric(x))
     stop('x is not numeric')
   if(any(x < 0 | x > 1))

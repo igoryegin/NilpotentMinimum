@@ -1,11 +1,11 @@
 \name{nilmin.residuum}
 \alias{nilmin.residuum}
 \title{
-  Nilpotent Minimum (NM) t-norm residuum
+  (Weak) Nilpotent Minimum residuum
 }
 \description{
   Computes the fuzzy implication (also known as R-implication or residuum)
-  defined within the NM fuzzy logic
+  defined within the (W)NM fuzzy logic
 }
 \usage{
 nilmin.residuum(x, y, type = c("strong", "weak"), fixpoint = 0.5)
@@ -27,17 +27,19 @@ nilmin.residuum(x, y, type = c("strong", "weak"), fixpoint = 0.5)
 }
 
 \value{
-a vector of fuzzy truth values for the expression \eqn{x \rightarrow_{NM} y}
+a vector of fuzzy truth values for the expression \eqn{x \rightarrow y}
 }
 
 \details{
-When \eqn{x > y}, the residuation operator corresponding to the NM t-norm is
+When \eqn{x > y}, the residuation operator corresponding to the (W)NM t-norm is
 
-\deqn{x \rightarrow_{NM} y = \max \left( \sim{x}, y \right)}
+\deqn{x \rightarrow y = \max \left( \sim{x}, y \right)}
 
-where \eqn{\sim x} is an arbitrary negation operator.
-This function uses Dombi negation,
-with \code{fixpoint} parameter passed internally to \code{\link{neg.dombi}}.
+where \eqn{\sim x} is an arbitrary strong or w negation operator.
+Otherwise, \eqn{x \rightarrow y} evaluates to 1.
+
+This function uses Dombi negation when \code{type = "strong"}, and RDP negation
+when \code{type = "weak"}.
 
 }
 \references{

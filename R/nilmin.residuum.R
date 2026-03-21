@@ -12,7 +12,7 @@ nilmin.residuum <- function(x, y, type = c("strong", "weak"), fixpoint = 0.5) {
   else if(type == "weak")
     ifelse(x <= y,
            1,
-           pmax(neg.refdp(x, fixpoint = fixpoint), y, na.rm = TRUE)
+           pmax(neg.revdp(x, fixpoint = fixpoint), y, na.rm = TRUE)
     )
   else
     stop('t-norm type must be one of c("strong", "weak")')
