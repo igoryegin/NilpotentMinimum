@@ -1,37 +1,33 @@
 nilmin.tnorm <- function(x, type = c("strong", "weak"), fixpoint = 0.5,
-                         byrow = TRUE) {
+                         byrow = FALSE) {
+  require(matrixStats)
   if(!is.matrix(x) | !is.numeric(x))
     stop("x must be a numeric vector or a matrix")
   if (length(x) == 0L) stop("x must be nonempty")
   if (all(is.na(x)))
     NA_real_
+  type <- match.arg(type)
+  negswitch <- function(x, type, fixpoint) switch(type,
+                                        strong = neg.dombi(x, fixpoint = fixpoint),
+                                        weak = neg.revdp(x, fixpoint = fixpoint))
   if(is.matrix(x) & byrow) {
-    tmp <- rowSort(x[, colAny(!is.na(x)), drop = FALSE])
-    if(ncol(tmp) <= 1L)
+    if(ncol(x) <= 1L)
       tmp
     else {
-      ifelse(rowSums(tmp[, 1:2], na.rm = TRUE) <= 1,
-             0,
-             pmin(tmp, na.rm = TRUE))
+      rowMins(x) * (rowMins(x) > negswitch(rowOrderStats(x, which = 2), type, fixpoint))
     }
   }
   else if(is.matrix(x) & !byrow) {
     if(is.matrix(x) & byrow) {
-      tmp <- colSort(x[, rowAny(!is.na(x)), drop = FALSE])
-      if(nrow(tmp) <= 1L)
+      if(nrow(x) <= 1L)
         tmp
       else {
-        ifelse(colSums(tmp[, 1:2], na.rm = TRUE) <= 1,
-               0,
-               pmin(tmp, na.rm = TRUE))
+        colMins(x) * (colMins(x) > negswitch(colOrderStats(x, which = 2), type, fixpoint))
       }
     }
   }
   else {
     tmp <- sort(as.numeric(x))
-    if(sum(tmp[1:2], na.rm = TRUE) <= min(1, length(tmp) - 1))
-      0
-    else
-      min(tmp, na.rm = TRUE)
+    min(tmp, na.rm = TRUE) * (tmp[1] > negswitch(tmp[2], type, fixpoint))
   }
 }
