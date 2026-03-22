@@ -14,16 +14,16 @@ nilmin.tnorm <- function(x, type = c("strong", "weak"), fixpoint = 0.5,
     if(ncol(x) <= 1L)
       x
     else {
-      rowMins(x) * (rowMins(x) > negswitch(rowOrderStats(x, which = 2), type, fixpoint))
+      tmp <- rowMins(x) *
+        (rowMins(x) > negswitch(rowOrderStats(x, which = 2), type, fixpoint))
     }
   }
   else if(is.matrix(x) & !byrow) {
-    if(is.matrix(x) & byrow) {
-      if(nrow(x) <= 1L)
-        x
-      else {
-        colMins(x) * (colMins(x) > negswitch(colOrderStats(x, which = 2), type, fixpoint))
-      }
+    if(nrow(x) <= 1L)
+      x
+    else {
+      tmp <- colMins(x) *
+        (colMins(x) > negswitch(colOrderStats(x, which = 2), type, fixpoint))
     }
   }
   else {
