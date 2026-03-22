@@ -12,7 +12,7 @@ nilmin.tnorm <- function(x, type = c("strong", "weak"), fixpoint = 0.5,
                                         weak = neg.revdp(x, fixpoint = fixpoint))
   if(is.matrix(x) & byrow) {
     if(ncol(x) <= 1L)
-      tmp
+      x
     else {
       rowMins(x) * (rowMins(x) > negswitch(rowOrderStats(x, which = 2), type, fixpoint))
     }
@@ -20,7 +20,7 @@ nilmin.tnorm <- function(x, type = c("strong", "weak"), fixpoint = 0.5,
   else if(is.matrix(x) & !byrow) {
     if(is.matrix(x) & byrow) {
       if(nrow(x) <= 1L)
-        tmp
+        x
       else {
         colMins(x) * (colMins(x) > negswitch(colOrderStats(x, which = 2), type, fixpoint))
       }
