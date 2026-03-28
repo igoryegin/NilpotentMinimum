@@ -1,13 +1,16 @@
-\name{pnilmin.tnorm}
+\name{NM.tnorm}
 \alias{pnilmin.tnorm}
+\alias{nilmin.tnorm}
 \title{
-Parallel Nilpotent Minimum (NM) t-norm
+(Weak) Nilpotent Minimum t-norm
 }
 \description{
-NM t-norm applied element-wise to a pair of fuzzy score vectors
+(W)NM t-norm (logical 'and') applied to a fuzzy score vector, element-wise to a pair of vectors,
+or rowwise/columnwise to a matrix of fuzzy scores.
 }
 \usage{
-pnilmin.tnorm(x, y, fixpoint = 0.5)
+nilmin.tnorm(x, type = c("strong", "weak"), fixpoint = 0.5, byrow = FALSE)
+pnilmin.tnorm(x, y, type = c("strong", "weak"), fixpoint = 0.5)
 }
 \arguments{
   \item{x, y}{
@@ -15,6 +18,10 @@ pnilmin.tnorm(x, y, fixpoint = 0.5)
   }
   \item{fixpoint}{
   negation fixpoint to be used inside the function
+  }
+  \item{byrow}{
+  a boolean indicating whether the t-norm operation should be applied to matrix rows;
+  ignored if \code{x} is not a matrix
   }
 }
 \value{
@@ -35,7 +42,11 @@ Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy lo
 }
 \examples{
 require(NilpotentMinimum)
-x <- c(0, 0.2, 0.21, 0.5, 1)
-y <- c(0.8, 0.8, 0.8, 0.5, 0.5)
-nilmin.residuum(x, y)
+x <- c(0.3, 0.6, 0.7, 0.9, 1)
+nilmin.tnorm(x)
+nilmin.tnorm(x, type = "weak")
+nilmin.tnorm(x, type = "weak", fixpoint = 0.75)
+
+y <- c(0.4, 0.4, 0, 0.5, 0.5)
+pnilmin.tnorm(x, y)
 }

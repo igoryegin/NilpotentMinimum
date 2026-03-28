@@ -11,9 +11,9 @@ Authors@R: c(
   )
 Description: (Strong) Nilpotent Minimum (commonly shortened to NM) is a class of t-norms 
     introduced by Fodor (1995) and later generalised as Weak Nilpotent Minimum (WNM) by 
-    Esteva and Godo (2001). This package provides a number of R functions for NM logic 
-    whose syntax is similar to that of lfl package. 
-    However, unlike lfl, NilpotentMininum is written entirely in native R code.
+    Esteva and Godo (2001). This package provides a number of R functions for a 
+    flexible class of (W)NM fuzzy logics. 
+    The syntax is designed to resemble that of lfl package. 
 License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
