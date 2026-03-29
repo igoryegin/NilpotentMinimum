@@ -1,3 +1,5 @@
+#' @export
+
 pnilmin.tconorm <- function(x, y, type = c("strong", "weak"), fixpoint = 0.5) {
   type <- match.arg(type)
   negswitch <- function(x, type, fixpoint) switch(type,

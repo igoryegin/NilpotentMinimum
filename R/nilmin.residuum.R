@@ -1,3 +1,5 @@
+#' @export
+
 nilmin.residuum <- function(x, y, type = c("strong", "weak"), fixpoint = 0.5) {
   type <- match.arg(type)
   if(!is.numeric(x) | !is.numeric(y))

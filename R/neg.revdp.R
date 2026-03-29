@@ -1,3 +1,5 @@
+#' @export
+
 neg.revdp <- function(x, fixpoint = 0.5) {
   if(!is.numeric(x))
     stop('x is not numeric')

@@ -1,3 +1,6 @@
+#' @export
+#' @import matrixStats
+
 nilmin.tnorm <- function(x, type = c("strong", "weak"), fixpoint = 0.5,
                          byrow = FALSE) {
   require(matrixStats)
