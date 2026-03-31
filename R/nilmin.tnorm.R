@@ -8,7 +8,7 @@ nilmin.tnorm <- function(x, type = c("strong", "weak"), fixpoint = 0.5,
     x <- unname(as.matrix(x))
     warning("data.frame passed to x; converted to matrix")
   }
-  if(!is.matrix(x) | !is.numeric(x))
+  if(!is.matrix(x) & !is.numeric(x))
     stop("x must be a numeric vector or a matrix")
   if (length(x) == 0L) stop("x must be nonempty")
   if (all(is.na(x)))
