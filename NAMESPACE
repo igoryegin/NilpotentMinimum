@@ -3,6 +3,7 @@
 export(neg.dombi)
 export(neg.revdp)
 export(nilmin.residuum)
+export(nilmin.tconorm)
 export(nilmin.tnorm)
 export(pnilmin.tconorm)
 export(pnilmin.tnorm)
