@@ -13,8 +13,11 @@ nilmin.tnorm(x, type = c("strong", "weak"), fixpoint = 0.5, byrow = FALSE)
 pnilmin.tnorm(x, y, type = c("strong", "weak"), fixpoint = 0.5)
 }
 \arguments{
-  \item{x, y}{
-  real-valued vectors on an interval from 0 to 1
+  \item{x}{
+  a numeric vector or a matrix of real numbers from 0 to 1
+  }
+  \item{y}{
+  a vector of real numbers on [0, 1]
   }
   \item{fixpoint}{
   negation fixpoint to be used inside the function
