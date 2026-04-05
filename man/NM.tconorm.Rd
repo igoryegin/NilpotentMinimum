@@ -1,4 +1,5 @@
 \name{NM.tconorm}
+\alias{NM.tconorm}
 \alias{pnilmin.tconorm}
 \alias{nilmin.tconorm}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -16,11 +17,19 @@ nilmin.tconorm(x, y, type = c("strong", "weak"), fixpoint = 0.5,
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  see \code{\link{nilmin.tnorm}}
+  see \code{\link{NM.tnorm}}
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+The formula for (Weak) Nilpotent Minimum t-conorm is given by
+
+\deqn{x ⨁ y = \left\{ \begin{array}{ll}
+1, & x > n(y) \\
+\max(x, y), & x \le n(y)
+\end{array}
+\right.
+}
+
 }
 \value{
 %%  ~Describe the value returned
@@ -30,19 +39,14 @@ nilmin.tconorm(x, y, type = c("strong", "weak"), fixpoint = 0.5,
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy logic. Studies in Logic.
 }
 \author{
-%%  ~~who you are~~
+  Igor Yegin
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{NM.tnorm}}
 }
 \examples{
 require(NilpotentMinimum)
@@ -54,12 +58,3 @@ nilmin.tconorm(x, type = "weak", fixpoint = 0.75)
 y <- c(0.4, 0.4, 0, 0.5, 0.5)
 pnilmin.tconorm(x, y)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory (show via RShowDoc("KEYWORDS")):
-% \keyword{ ~kwd1 }
-% \keyword{ ~kwd2 }
-% Use only one keyword per line.
-% For non-standard keywords, use \concept instead of \keyword:
-% \concept{ ~cpt1 }
-% \concept{ ~cpt2 }
-% Use only one concept per line.

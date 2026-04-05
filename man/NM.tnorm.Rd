@@ -1,4 +1,5 @@
 \name{NM.tnorm}
+\alias{NM.tnorm}
 \alias{pnilmin.tnorm}
 \alias{nilmin.tnorm}
 \title{
@@ -31,7 +32,17 @@ pnilmin.tnorm(x, y, type = c("strong", "weak"), fixpoint = 0.5)
   a vector of truth values
 }
 \details{
-See \code{\link{nilmin.tnorm}}
+The formula for (Weak) Nilpotent Minimum t-norm is
+
+\deqn{x ⊛ y = \left\{ \begin{array}{ll}
+\min(x, y), & x > n(y) \\
+0, & x \le n(y)
+\end{array}
+\right.}
+
+Nilpotent Minimum is the \emph{pointwise largest} t-norm out of all t-norms with
+strong (i.e., order-reversing and involutive) negation.
+}
 }
 
 \references{
