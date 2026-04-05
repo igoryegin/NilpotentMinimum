@@ -43,7 +43,6 @@ The formula for (Weak) Nilpotent Minimum t-norm is
 Nilpotent Minimum is the \emph{pointwise largest} t-norm out of all t-norms with
 strong (i.e., order-reversing and involutive) negation.
 }
-}
 
 \references{
 Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy logic. Studies in Logic.

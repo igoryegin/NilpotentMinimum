@@ -19,7 +19,6 @@ nilmin.tconorm(x, y, type = c("strong", "weak"), fixpoint = 0.5,
 \arguments{
   see \code{\link{NM.tnorm}}
 }
-}
 \details{
 The formula for (Weak) Nilpotent Minimum t-conorm is given by
 
