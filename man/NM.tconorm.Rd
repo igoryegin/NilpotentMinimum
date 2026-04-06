@@ -2,7 +2,6 @@
 \alias{NM.tconorm}
 \alias{pnilmin.tconorm}
 \alias{nilmin.tconorm}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 (Weak) Nilpotent Minimum t-conorm
 }
@@ -31,13 +30,13 @@ The formula for (Weak) Nilpotent Minimum t-conorm is given by
 
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+a vector (or a single number) of fuzzy truth values
 }
 \references{
+Esteva, F., & Godo, L. (2001). Monoidal t-norm based logic: towards a logic for left-continuous t-norms. 
+	\emph{Fuzzy Sets and Systems, 124(3)}, 271–288. https://doi.org/10.1016/s0165-0114(01)00098-7
+Wang, S. (2005). A fuzzy logic for the revised drastic product t-norm. 
+	\emph{Soft Computing, 11(6)}, 585–590. https://doi.org/10.1007/s00500-005-0024-8
 Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy logic. Studies in Logic.
 }
 \author{
@@ -49,11 +48,10 @@ Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy lo
 }
 \examples{
 require(NilpotentMinimum)
-x <- c(0.3, 0.6, 0.7, 0.9, 1)
+x <- c(0, 0.1, 0.1, 0.3, 0.4, 0.45, 0.49)
 nilmin.tconorm(x)
 nilmin.tconorm(x, type = "weak")
-nilmin.tconorm(x, type = "weak", fixpoint = 0.75)
 
-y <- c(0.4, 0.4, 0, 0.5, 0.5)
+y <- c(0, 0.7, 0., 0.7, 0, 0.7, 0)
 pnilmin.tconorm(x, y)
 }
