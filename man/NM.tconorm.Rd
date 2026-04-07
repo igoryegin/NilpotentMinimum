@@ -35,8 +35,10 @@ a vector (or a single number) of fuzzy truth values
 \references{
 Esteva, F., & Godo, L. (2001). Monoidal t-norm based logic: towards a logic for left-continuous t-norms. 
 	\emph{Fuzzy Sets and Systems, 124(3)}, 271–288. https://doi.org/10.1016/s0165-0114(01)00098-7
+
 Wang, S. (2005). A fuzzy logic for the revised drastic product t-norm. 
 	\emph{Soft Computing, 11(6)}, 585–590. https://doi.org/10.1007/s00500-005-0024-8
+
 Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy logic. Studies in Logic.
 }
 \author{
