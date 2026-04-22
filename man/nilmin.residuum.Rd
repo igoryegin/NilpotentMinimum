@@ -8,21 +8,27 @@
   defined within the (W)NM fuzzy logic
 }
 \usage{
-nilmin.residuum(x, y, type = c("strong", "weak"), fixpoint = 0.5)
+nilmin.residuum(x, y, type = c("strong", "weak", "ordsum"), 
+	fixpoint = 0.5, alpha = 1/3)
 }
 
 \arguments{
   \item{x}{
-  a vector of real numbers from 0 to 1; the \emph{left-hand} side of implication
+  a vector of numbers from 0 to 1; the \emph{left-hand} side of implication
   }
   \item{y}{
-  a vector of real numbers from 0 to 1; the \emph{right-hand} side of implication
+  a vector of numbers from 0 to 1; the \emph{right-hand} side of implication
   }
   \item{type}{
-  a string; determines whether strong or weak negation is used (see \link{FuzzyNegation})
+  a string; determines whether strong or weak negation is used (see \link{FuzzyNegation}); 
+	ignored for \code{type = "ordsum"}
   }
   \item{fixpoint}{
-  a real number; negation fixpoint to be used inside the function
+  a real number; negation fixpoint to be used inside the function; ignored for \code{type = "ordsum"}
+  }
+  \item{alpha} {
+  a real number; threshold parameter for Nilpotent Ordinal Sum;
+  only used when \code{type = "ordsum"} is selected
   }
 }
 
@@ -43,13 +49,17 @@ when \code{type = "weak"}.
 
 }
 \references{
+Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy logic. Studies in Logic.
+
 Esteva, F., & Godo, L. (2001). Monoidal t-norm based logic: towards a logic for left-continuous t-norms. 
 	\emph{Fuzzy Sets and Systems, 124(3)}, 271–288. https://doi.org/10.1016/s0165-0114(01)00098-7
+
+Jenei, S. (2000). New family of triangular norms via contrapositive symmetrization 
+	of residuated implications. \emph{Fuzzy Sets and Systems, 110}, 157-174.
 
 Wang, S. (2005). A fuzzy logic for the revised drastic product t-norm.
 	\emph{Soft Computing, 11(6)}, 585–590. https://doi.org/10.1007/s00500-005-0024-8
 
-Cintula, P., Hájek, P., & Noguera, C. (2011). Handbook of mathematical fuzzy logic. Studies in Logic.
 }
 \author{
 Igor Yegin
