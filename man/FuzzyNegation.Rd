@@ -3,7 +3,7 @@
 \alias{neg.dombi}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Strong and Weak Fuzzy Negations
+Strong and Weak Negation Operators
 }
 \description{
 Simple functions to compute Dombi-parametrised (strong) negation or Revised Drastic Product
@@ -25,11 +25,11 @@ neg.revdp(x, fixpoint = 0.5)
 }
 \details{
 
-By definition, a fuzzy negation operator is \eqn{N(x)} is a \emph{strong negation} if
+By definition, a fuzzy negation operator is \eqn{N(x)} is \emph{strong} if
 it is order-reversing and the law of involution (double negation) holds for it,
 i.e., \eqn{N(N(x)) = x}.
 
-For a \emph{weak negation} \eqn{n(x)} it is sufficient that \eqn{n(n(x)) \ge x} is satisfied.
+For a \emph{weak negation} \eqn{n(x)} double negation needs not hold; it is, in fact, sufficient that \eqn{n(n(x)) \ge x} is satisfied.
 
 
 The strong negation operator implemented in this package is the \bold{Dombi} negation,
